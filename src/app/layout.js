@@ -24,8 +24,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Link href={"/about"}>about</Link>
-        <Link href={"/courses"}>courses</Link>
+        <Link className="underline ml-4 mr-4 hover:no-underline text-blue-500 hover:text-blue-700 font-bold" href={"/about"}>about</Link>
+        <Link className="underline ml-4 mr-4 hover:no-underline text-blue-500 hover:text-blue-700 font-bold" href={"/courses"}>courses</Link>
+        <Link className="underline ml-4 mr-4 hover:no-underline text-blue-500 hover:text-blue-700 font-bold" href={"/"}>home</Link>
         {children}
       </body>
     </html>
