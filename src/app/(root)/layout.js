@@ -1,17 +1,5 @@
-import localFont from "next/font/local";
-import "./globals.css";
+import "../globals.css";
 import Link from "next/link";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -21,12 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
         <Link className="underline ml-4 mr-4 hover:no-underline text-blue-500 hover:text-blue-700 font-bold" href={"/about"}>about</Link>
         <Link className="underline ml-4 mr-4 hover:no-underline text-blue-500 hover:text-blue-700 font-bold" href={"/courses"}>courses</Link>
-        <Link className="underline ml-4 mr-4 hover:no-underline text-blue-500 hover:text-blue-700 font-bold" href={"/"}>home</Link>
         {children}
       </body>
     </html>
